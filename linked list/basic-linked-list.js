@@ -8,9 +8,9 @@ class Node {
 	}
 }
 
-class SinglyLinkedList {
-	constructor(head = null) {
-		this.head = head;
+class LinkedList {
+	constructor() {
+		this.head = null;
 		this.size = 0;
 	}
 
@@ -159,51 +159,51 @@ class SinglyLinkedList {
   
 }
 
-const singlyLinkedList = new SinglyLinkedList();
+const linkedList = new LinkedList();
 
 
-singlyLinkedList.print()
+linkedList.print()
 
-singlyLinkedList.prepend(10)
-singlyLinkedList.prepend(4)
+linkedList.prepend(10)
+linkedList.prepend(4)
 
-singlyLinkedList.print()
+linkedList.print()
 
-singlyLinkedList.prepend(2)
-singlyLinkedList.prepend(1)
-singlyLinkedList.print()
+linkedList.prepend(2)
+linkedList.prepend(1)
+linkedList.print()
 
-singlyLinkedList.append(20)
-singlyLinkedList.append(40)
+linkedList.append(20)
+linkedList.append(40)
 
-singlyLinkedList.print()
-
-
-singlyLinkedList.insert(60, 6)
-singlyLinkedList.insert(15,4)
-singlyLinkedList.insert(17, 99)
-singlyLinkedList.insert(0, 0)
-
-singlyLinkedList.print()
+linkedList.print()
 
 
-singlyLinkedList.removeFromValue(15)
-singlyLinkedList.removeFromValue(60)
-singlyLinkedList.removeFromValue(80)
+linkedList.insert(60, 6)
+linkedList.insert(15,4)
+linkedList.insert(17, 99)
+linkedList.insert(0, 0)
+
+linkedList.print()
 
 
-singlyLinkedList.print()
-
-singlyLinkedList.removeFromIndex(3)
-singlyLinkedList.removeFromIndex(-1)
-singlyLinkedList.removeFromIndex(100)
-
-singlyLinkedList.print()
-
-singlyLinkedList.search(10)
+linkedList.removeFromValue(15)
+linkedList.removeFromValue(60)
+linkedList.removeFromValue(80)
 
 
-singlyLinkedList.reverse()
-singlyLinkedList.print()
+linkedList.print()
+
+linkedList.removeFromIndex(3)
+linkedList.removeFromIndex(-1)
+linkedList.removeFromIndex(100)
+
+linkedList.print()
+
+linkedList.search(10)
+
+
+linkedList.reverse()
+linkedList.print()
 
 /* -------------------------------------------------------------------------- */
