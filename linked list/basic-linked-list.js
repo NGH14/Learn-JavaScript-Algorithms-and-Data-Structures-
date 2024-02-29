@@ -206,4 +206,6 @@ linkedList.search(10)
 linkedList.reverse()
 linkedList.print()
 
+
+module.exports = LinkedList;
 /* -------------------------------------------------------------------------- */

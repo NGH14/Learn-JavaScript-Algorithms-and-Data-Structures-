@@ -106,3 +106,4 @@ linkedList.removeLastNode()
 linkedList.print();
 
 
+module.exports = LinkedList;
