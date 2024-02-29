@@ -2,8 +2,8 @@
 "use strict"
 
 class Node {
-	constructor(data) {
-		this.data = data;
+	constructor(value) {
+		this.value = value;
 		this.next = null;
 	}
 }
@@ -25,7 +25,7 @@ class LinkedList {
 
     while (prev) {
       if (!prev.next) return null;
-      if (value == prev.next.data) (prev.next = prev.next.next, this.size--);
+      if (value == prev.next.value) (prev.next = prev.next.next, this.size--);
       prev = prev.next;
     }
   }
@@ -46,8 +46,8 @@ class LinkedList {
       return this.size;
   }
   
-  prepend(data) {
-    const newNode = new Node(data)
+  prepend(value) {
+    const newNode = new Node(value)
     if (!this.head) this.head = newNode 
     else { newNode.next = this.head, this.head = newNode}
     
@@ -60,14 +60,14 @@ class LinkedList {
     let curr = this.head;
     let listNode = ''
     while (curr) {
-      listNode += `${curr.data} -> `
+      listNode += `${curr.value} -> `
       curr = curr.next
     }
     console.log(`[${this.getSize()}] ` + listNode + null)
   }
 
-  append(data){
-    const newNode = new Node(data)
+  append(value){
+    const newNode = new Node(value)
     if (this.isEmpty()) this.head = newNode
 
     let prev = this.head;
@@ -87,18 +87,18 @@ class LinkedList {
     let curr = this.head;
 
     for (let i = 0; i < this.size; i++) {
-      if (curr.data === value) return console.log(i);
+      if (curr.value === value) return console.log(i);
       curr = curr.next
     }
     return -1;
   }
 
-  insert(data, index) {
+  insert(value, index) {
     if (index < 0 || index > this.size) return;
-    if (index === 0) return this.prepend(data)
-    if (index === this.size) return this.append(data)
+    if (index === 0) return this.prepend(value)
+    if (index === this.size) return this.append(value)
 
-    const newNode = new Node(data);
+    const newNode = new Node(value);
     let prev = this.head;
     
     for (let i = 0; i < index-1; i++) {

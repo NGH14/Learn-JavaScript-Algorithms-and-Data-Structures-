@@ -3,8 +3,8 @@ const util = require('util')
 
 
 class Node {
-	constructor(data) {
-		this.data = data;
+	constructor(value) {
+		this.value = value;
 		this.next = null;
 	}
 }
@@ -24,8 +24,8 @@ class LinkedList {
 		return this.size;
 	}
 
-	prepend(data) {
-		const node = new Node(data);
+	prepend(value) {
+		const node = new Node(value);
 
 		if (this.isEmpty()) {
 			this.head = node;
@@ -37,14 +37,16 @@ class LinkedList {
     this.size++
 	}
 
-  append(data) {
-    const node = new Node(data);
+  append(value) {
+    const node = new Node(value);
     if (this.isEmpty()) {
       this.head = node;
       this.tail = this.head
     }
     this.tail.next = node;
-    this.tail = node  
+    this.tail = node;
+
+    
     this.size++
   }
 
@@ -66,7 +68,6 @@ class LinkedList {
     }
     prev.next = null;
     this.tail = prev;
-
     this.size--
   }
 
@@ -76,7 +77,7 @@ class LinkedList {
     let curr = this.head;
     let str = "";
     while (curr) {
-      str += `${curr.data} -> `
+      str += `${curr.value} -> `
       curr = curr.next 
     }
     console.log(str + "null")
@@ -86,24 +87,26 @@ class LinkedList {
 let linkedList = new LinkedList();
 
 
-linkedList.prepend(10)
-linkedList.print();
-
-linkedList.prepend(20)
-linkedList.print();
 
 
-linkedList.append(30)
-linkedList.append(40)
-linkedList.print();
+// linkedList.prepend(10)
+// linkedList.print();
+
+// linkedList.prepend(20)
+// linkedList.print();
 
 
-linkedList.removeFirstNode()
-linkedList.print();
+// linkedList.append(30)
+// linkedList.append(40)
+// linkedList.print();
 
 
-linkedList.removeLastNode()
-linkedList.print();
+// linkedList.removeFirstNode()
+// linkedList.print();
+
+
+// linkedList.removeLastNode()
+// linkedList.print();
 
 
 module.exports = LinkedList;
